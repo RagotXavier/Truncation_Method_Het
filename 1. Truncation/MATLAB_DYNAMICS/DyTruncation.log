@@ -1,0 +1,270 @@
+Starting preprocessing of the model file ...
+Found 91 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 1).
+Processing outputs ...
+done
+Preprocessing completed.
+
+
+
+
+Residuals of the static equations:
+
+Equation number 1 : 0 : c1
+Equation number 2 : 0 : at1
+Equation number 3 : 0 : 3
+Equation number 4 : 0 : c2
+Equation number 5 : 0 : at2
+Equation number 6 : 0 : a2
+Equation number 7 : 0 : c3
+Equation number 8 : 0 : at3
+Equation number 9 : 0 : a3
+Equation number 10 : 0 : c4
+Equation number 11 : 0 : at4
+Equation number 12 : 0 : a4
+Equation number 13 : 0 : c5
+Equation number 14 : 0 : at5
+Equation number 15 : 0 : a5
+Equation number 16 : 0 : c6
+Equation number 17 : 0 : at6
+Equation number 18 : 0 : a6
+Equation number 19 : 0 : c7
+Equation number 20 : 0 : at7
+Equation number 21 : 0 : a7
+Equation number 22 : -9.2178e-08 : c8
+Equation number 23 : 0 : at8
+Equation number 24 : 0 : a8
+Equation number 25 : 0 : c9
+Equation number 26 : 0 : at9
+Equation number 27 : 0 : a9
+Equation number 28 : 0 : c10
+Equation number 29 : 0 : at10
+Equation number 30 : 0 : a10
+Equation number 31 : 0 : c11
+Equation number 32 : 0 : at11
+Equation number 33 : 0 : a11
+Equation number 34 : 0 : c12
+Equation number 35 : 0 : at12
+Equation number 36 : 0 : a12
+Equation number 37 : -9.9348e-08 : c13
+Equation number 38 : 0 : at13
+Equation number 39 : 0 : a13
+Equation number 40 : -2.3127e-07 : c14
+Equation number 41 : 0 : at14
+Equation number 42 : 0 : a14
+Equation number 43 : 0 : c15
+Equation number 44 : 0 : at15
+Equation number 45 : 0 : a15
+Equation number 46 : 0 : c16
+Equation number 47 : 0 : at16
+Equation number 48 : 0 : a16
+Equation number 49 : 0 : c17
+Equation number 50 : 0 : at17
+Equation number 51 : 0 : a17
+Equation number 52 : -1.0017e-07 : c18
+Equation number 53 : 0 : at18
+Equation number 54 : 0 : a18
+Equation number 55 : -2.4208e-07 : c19
+Equation number 56 : 0 : at19
+Equation number 57 : 0 : a19
+Equation number 58 : -5.4661e-07 : c20
+Equation number 59 : 0 : at20
+Equation number 60 : 0 : a20
+Equation number 61 : 0 : c21
+Equation number 62 : 0 : at21
+Equation number 63 : 0 : a21
+Equation number 64 : 0 : c22
+Equation number 65 : 0 : at22
+Equation number 66 : 0 : a22
+Equation number 67 : 0 : c23
+Equation number 68 : 0 : at23
+Equation number 69 : 0 : a23
+Equation number 70 : -2.4678e-07 : c24
+Equation number 71 : 0 : at24
+Equation number 72 : 0 : a24
+Equation number 73 : -5.5132e-07 : c25
+Equation number 74 : 0 : at25
+Equation number 75 : 0 : a25
+Equation number 76 : 1.4186e-07 : w
+Equation number 77 : 0 : 77
+Equation number 78 : 0 : Z
+Equation number 79 : 0 : u
+Equation number 80 : 0 : GDP
+Equation number 81 : 0 : C
+Equation number 82 : 0 : I
+Equation number 83 : 3.5163e-07 : K
+Equation number 84 : 0 : ut
+Equation number 85 : 0 : Kt
+Equation number 86 : 0 : Ct
+Equation number 87 : 0 : wt
+Equation number 88 : 0 : rt
+Equation number 89 : 0 : Zt
+Equation number 90 : 0 : GDPt
+Equation number 91 : 0 : It
+
+
+
+STEADY-STATE RESULTS:
+
+r    		 0.0163926
+w    		 2.16063
+Z    		 1
+K    		 29.3617
+GDP  		 3.37599
+u    		 0
+I    		 0.734043
+C    		 2.64195
+rt   		 0
+wt   		 0
+Zt   		 0
+Kt   		 0
+GDPt 		 0
+ut   		 0
+It   		 0
+Ct   		 0
+a1   		 4.651
+at1  		 4.72895
+c1   		 0.546541
+a2   		 8.6897
+at2  		 8.82471
+c2   		 0.670742
+a3   		 0
+at3  		 0
+c3   		 0.391075
+a4   		 0
+at4  		 0
+c4   		 0.391075
+a5   		 0
+at5  		 0
+c5   		 0.391075
+a6   		 4.6512
+at6  		 4.72895
+c6   		 0.963344
+a7   		 8.6899
+at7  		 8.82471
+c7   		 1.08754
+a8   		 19.3978
+at8  		 19.6926
+c8   		 1.42567
+a9   		 0
+at9  		 0
+c9   		 0.808077
+a10  		 0
+at10 		 0
+c10  		 0.808077
+a11  		 0
+at11 		 0
+c11  		 1.67017
+a12  		 8.7613
+at12 		 8.82471
+c12  		 1.87824
+a13  		 19.5136
+at13 		 19.6926
+c13  		 2.17197
+a14  		 48.9102
+at14 		 49.3435
+c14  		 2.91229
+a15  		 0
+at15 		 0
+c15  		 1.67017
+a16  		 0
+at16 		 0
+c16  		 3.45183
+a17  		 0
+at17 		 0
+c17  		 3.45183
+a18  		 20.0354
+at18 		 19.6926
+c18  		 3.43183
+a19  		 49.456
+at19 		 49.3435
+c19  		 4.14815
+a20  		 114.272
+at20 		 114.544
+c20  		 5.60211
+a21  		 0
+at21 		 0
+c21  		 7.13506
+a22  		 0
+at22 		 0
+c22  		 7.13506
+a23  		 0
+at23 		 0
+c23  		 7.13506
+a24  		 50.9871
+at24 		 49.3435
+c24  		 6.30029
+a25  		 115.795
+at25 		 114.544
+c25  		 7.76194
+
+EIGENVALUES:
+         Modulus             Real        Imaginary
+
+               0               -0                0
+               0                0                0
+               0                0                0
+               0                0                0
+               0               -0                0
+               0                0                0
+               0                0                0
+       1.043e-54       -1.043e-54                0
+       1.634e-33       -1.634e-33                0
+       3.906e-33        3.906e-33                0
+       5.153e-33        5.153e-33                0
+       1.027e-32       -1.027e-32                0
+         1.4e-32          1.4e-32                0
+       1.769e-31        1.769e-31                0
+       2.411e-31       -2.411e-31                0
+       6.439e-31       -6.439e-31                0
+       5.016e-28       -5.016e-28                0
+       7.007e-28        7.007e-28                0
+       8.569e-28       -8.569e-28                0
+       1.604e-26       -1.604e-26                0
+       4.184e-25        4.184e-25                0
+         7.4e-18          7.4e-18                0
+       1.452e-17        1.452e-17                0
+       4.011e-17       -4.011e-17                0
+       4.846e-17        4.846e-17                0
+       0.0006196       -0.0001523        0.0006006
+       0.0006196       -0.0001523       -0.0006006
+            0.95             0.95                0
+       8.056e+18       -8.056e+18                0
+
+
+There are 1 eigenvalue(s) larger than 1 in modulus 
+for 2 forward-looking variable(s)
+
+The rank condition ISN'T verified!
+
+Error using <a href="matlab:matlab.internal.language.introspective.errorDocCallback('print_info', '/Applications/Dynare/4.6.2/matlab/print_info.m', 32)" style="font-weight:bold">print_info</a> (<a href="matlab: opentoline('/Applications/Dynare/4.6.2/matlab/print_info.m',32,0)">line 32</a>)
+Blanchard & Kahn conditions are not satisfied: indeterminacy.
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('stoch_simul', '/Applications/Dynare/4.6.2/matlab/stoch_simul.m', 103)" style="font-weight:bold">stoch_simul</a> (<a href="matlab: opentoline('/Applications/Dynare/4.6.2/matlab/stoch_simul.m',103,0)">line 103</a>)
+    print_info(info, options_.noprint, options_);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('DyTruncation.driver', '/Users/77628/Dropbox/Articles/PROJETS/Simple_Truncation_Paper/code/1. Truncation/MATLAB_DYNAMICS/+DyTruncation/driver.m', 699)" style="font-weight:bold">DyTruncation.driver</a> (<a href="matlab: opentoline('/Users/77628/Dropbox/Articles/PROJETS/Simple_Truncation_Paper/code/1. Truncation/MATLAB_DYNAMICS/+DyTruncation/driver.m',699,0)">line 699</a>)
+[info, oo_, options_, M_] = stoch_simul(M_, options_, oo_, var_list_);
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('dynare', '/Applications/Dynare/4.6.2/matlab/dynare.m', 293)" style="font-weight:bold">dynare</a> (<a href="matlab: opentoline('/Applications/Dynare/4.6.2/matlab/dynare.m',293,0)">line 293</a>)
+evalin('base',[fname '.driver']) ;
+
+Error in <a href="matlab:matlab.internal.language.introspective.errorDocCallback('Truncation_simple_case', '/Users/77628/Dropbox/Articles/PROJETS/Simple_Truncation_Paper/code/0. Simple Case/Truncation_simple_case.m', 254)" style="font-weight:bold">Truncation_simple_case</a> (<a href="matlab: opentoline('/Users/77628/Dropbox/Articles/PROJETS/Simple_Truncation_Paper/code/0. Simple Case/Truncation_simple_case.m',254,0)">line 254</a>)
+dynare DyTruncation noclearall
+
+clc
+Truncation_simple_case
+Using 64-bit preprocessor
+Starting Dynare (version 4.6.2).
+Calling Dynare with arguments: noclearall
+Starting preprocessing of the model file ...
+Found 91 equation(s).
+Evaluating expressions...done
+Computing static model derivatives (order 1).
+Computing dynamic model derivatives (order 1).
+Processing outputs ...
+done
+Preprocessing completed.
+
