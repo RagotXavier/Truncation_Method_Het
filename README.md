@@ -4,8 +4,9 @@ This repo contains the main files to implement the truncation method in heteroge
  2.	The Folder “1. Truncation” provides additional codes and is more efficient in solving the model. It requires the Julia language 
    a.	In this folder there is a README file which explains the various files.
    b.	We solve for a Bewley model, using the EGM method and then provide procedures to aggregate models in the space of history, and then we write a Dynare code to solve the dynamics with perturbation method.
- 3.	The folder “2. BKM” provides the solution of the same model using the Boppart, Krusell, Mitman method. The main file is “MIT\_simul.jl”
+ 3.	The folder “2. Transition” provides the solution of the same model using the transitio. method.
  4.	The folder “3. Reiter provides the solution of the same model using the Reiter model. The main file is “Main\_Reiter.jl”. Note that we use the Dynare solver to implement the Reiter solution
- 5.	The folder “4. RA” provides the solution of the same model for the representative agent economy, using Dynare.
+ 5.	The folder “4. REPRESENTATIVE AGENT” provides the solution of the same model for the representative agent economy, using Dynare.
  6.	The folder “5. Figures” contains a Julia code to Plot figures with the information contained in the other folders.
+ 7.	The folder “6. Paper” provides the last version of the paper.
 
