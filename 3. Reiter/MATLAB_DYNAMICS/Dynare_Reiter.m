@@ -23,8 +23,8 @@ formatSpec  = '%16.12f';
 %% DEFINING THE ENDOGENOUS VARIABLES 
 
 str = ['var\n'] ; fprintf(fid, str);
-str = ['r w Z K GDP u Pop I C Cb Cm Ctp W\n'] ; fprintf(fid, str);  % variables
-str = ['rt wt Zt Kt GDPt ut It Ct Cbt Cmt Ctt Wt\n'] ; fprintf(fid, str);
+str = ['r w Z K GDP u Pop I C Cb W\n'] ; fprintf(fid, str);  % variables
+str = ['rt wt Zt Kt GDPt ut It Ct Cbt Wt\n'] ; fprintf(fid, str);
 
 for i = 1:Ntot
     str     = ['ap',num2str(i),' '] ; fprintf(fid,str);        
@@ -195,54 +195,6 @@ str = [';'] ;         fprintf(fid, str);str = [' %% equation ', num2str(equa),'\
 str = ['Cb = Cba/ba;']; fprintf(fid, str);  str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;   
  
 
-%%%%%%%%%%%%%%%%%%%%%%%%%  CONSUMPTION TOP 50 PERCENT  %%%%%%%%%%%%%%%%
-str = ['#Cma = (']; fprintf(fid, str);
-for i = [m']
-      str = ['+S',num2str(i),'(1)*c',num2str(i),'(1)']; fprintf(fid, str);
-      if mod(i,10)==0; % multiple de 10
-         str = ['\n'] ;         fprintf(fid, str);
-     end;
-end;
-str = [');'] ;         fprintf(fid, str);str = [' %% equation ', num2str(equa),'\n\n']; fprintf(fid, str); equa = equa+1;  
-
-str = ['#ma = ']; fprintf(fid, str);
-for i = [m']
-     str    = ['+S',num2str(i)]; fprintf(fid, str);
-      if mod(i,10)==0; %multiple de 10
-         str = ['\n'] ;         fprintf(fid, str);
-     end;  
-end;
-str = [';'] ;         fprintf(fid, str);str = [' %% equation ', num2str(equa),'\n\n']; fprintf(fid, str); equa = equa+1;  
-
-str = ['Cm = Cma/ma;']; fprintf(fid, str);  str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;   
-
-%%%%%%%%%%%%%%%%%%%%%%%%%  CONSUMPTION TOP 10 PERCENT  %%%%%%%%%%%%%%%%
-
-
-str = ['#Ctpa = (']; fprintf(fid, str);
-for i = [t']
-      %str = ['+S',num2str(i),'(1)*c',num2str(i),'(1)']; fprintf(fid, str);
-      str = ['+S',num2str(i),'*c',num2str(i),' ']; fprintf(fid, str);
-      if mod(i,10)==0; % multiple de 10
-         str = ['\n'] ;         fprintf(fid, str);
-     end;
-end;
-str = [');'] ;         fprintf(fid, str);str = [' %% equation ', num2str(equa),'\n\n']; fprintf(fid, str); equa = equa+1;  
-
-str = ['#ta = ']; fprintf(fid, str);
-for i = [t']
-     str    = ['+S',num2str(i)]; fprintf(fid, str);
-      if mod(i,10)==0; %multiple de 10
-         str = ['\n'] ;         fprintf(fid, str);
-     end;  
-end;
-str = [';'] ;         fprintf(fid, str);str = [' %% equation ', num2str(equa),'\n\n']; fprintf(fid, str); equa = equa+1;  
-
-str = ['Ctp = Ctpa/ta;']; fprintf(fid, str);  str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;   
-
-%str = ['Ctp = (C - Cba)/(1-ba);']; fprintf(fid, str);  str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;   
-
-
 str = ['w = (1 - alpha)*(Z^(1/(1-alpha)))*((r + delta)/alpha)^(alpha/(alpha-1));']; fprintf(fid, str);  str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;   
 str = ['(r + delta)/(alpha*Z) = (K/1)^(alpha-1);']; fprintf(fid, str); str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;   
 str = ['Z = 1+u;']; fprintf(fid, str); str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;   
@@ -256,8 +208,6 @@ str = ['ut = 100*u;'] ; fprintf(fid, str);  str = [' %% equation ', num2str(equa
 str = ['Kt = 100*(K/',num2str(K,formatSpec),'-1);'] ; fprintf(fid, str);  str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;
 str = ['Ct = 100*(C/steady_state(C)-1);'] ; fprintf(fid, str);  str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;
 str = ['Cbt = 100*(Cb/',num2str(Cbs,formatSpec),'-1);'] ; fprintf(fid, str);  str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;
-str = ['Cmt = 100*(Cm/',num2str(Cms,formatSpec),'-1);'] ; fprintf(fid, str);  str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;
-str = ['Ctt = 100*(Ctp/',num2str(Cts,formatSpec),'-1);'] ; fprintf(fid, str);  str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;
 str = ['wt = 100*(w/',num2str(w,formatSpec),'-1);'] ; fprintf(fid, str);  str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;
 str = ['rt = 100*(r - ',num2str(R-1,formatSpec),');'] ; fprintf(fid, str); str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;
 str = ['Zt = ut;'] ; fprintf(fid, str);  str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;
@@ -294,16 +244,12 @@ str = ['Pop = 1;\n']; fprintf(fid, str);
 str = ['I =  delta*K;\n']; fprintf(fid, str); 
 str = ['C =  GDP - I;']; fprintf(fid, str); str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;
 str = ['Cb = ', num2str(Cbs,formatSpec),';\n'] ; fprintf(fid, str);
-str = ['Cm = ', num2str(Cms,formatSpec),';\n'] ; fprintf(fid, str);
-str = ['Ctp = ', num2str(Cts,formatSpec),';\n'] ; fprintf(fid, str);
 str = ['W = ', num2str(Ws,formatSpec),';\n'] ; fprintf(fid, str);
 
 str = ['ut = 0;\n'] ; fprintf(fid, str);
 str = ['Kt = 0;\n'] ; fprintf(fid, str);
 str = ['Ct  = 0;\n'] ; fprintf(fid, str);
 str = ['Cbt  = 0;\n'] ; fprintf(fid, str);
-str = ['Cmt  = 0;\n'] ; fprintf(fid, str);
-str = ['Ctt  = 0;\n'] ; fprintf(fid, str);
 str = ['wt = 0;\n'] ; fprintf(fid, str);
 str = ['rt = 0;\n'] ; fprintf(fid, str);
 str = ['Zt = 0;\n'] ; fprintf(fid, str);
@@ -326,7 +272,7 @@ str = ['shocks;\n var eps; stderr ',num2str(sigma_u,formatSpec),';\n end;\n'] ; 
 %str = ['stoch_simul (order=1,irf=100, hp_filter =1600)  u Z GDP C I w;'] ; fprintf(fid, str); 
 %str = ['stoch_simul (order=1,irf=200, periods = 10000)  u Z GDP C K I r w;'] ; fprintf(fid, str);
 str = ['options_.TeX=1;\n\n'] ; fprintf(fid, str);
-str = ['stoch_simul (order=1,irf=200, periods=10000) ut Zt GDPt Ct Cbt Cmt Ctt Kt It Wt rt wt u Z GDP C Cb Cm Ctp K I W r w c500;'] ; fprintf(fid, str);
+str = ['stoch_simul (order=1,irf=200, periods=10000) ut Zt GDPt Ct Cbt Kt It Wt rt wt u Z GDP C Cb  K I W r w;'] ; fprintf(fid, str);
 
 %% CALLING DYNARE
 
@@ -334,11 +280,11 @@ dynare DyReiter.mod nostrict
 
 %% GENERATING THE RESULTS
 
-save tofigreiter ut_eps Zt_eps GDPt_eps Ct_eps Cbt_eps Cmt_eps Ctt_eps Kt_eps It_eps Wt_eps rt_eps wt_eps 
+save tofigreiter ut_eps Zt_eps GDPt_eps Ct_eps Cbt_eps Kt_eps It_eps Wt_eps rt_eps wt_eps 
 %save totalreiter oo_
 
-save tofigreitersim u Z GDP C Cb Cm Ctp K I W r w 
-save tofigreitersimt ut Zt GDPt Ct Cbt Cmt Ctt Kt It Wt rt wt 
+save tofigreitersim u Z GDP C Cb K I W r w 
+save tofigreitersimt ut Zt GDPt Ct Cbt Kt It Wt rt wt 
 
 
 

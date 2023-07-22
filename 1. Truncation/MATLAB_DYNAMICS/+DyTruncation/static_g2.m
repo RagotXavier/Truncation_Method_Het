@@ -18,6 +18,6 @@ function g2 = static_g2(T, y, x, params, T_flag)
 if T_flag
     T = DyTruncation.static_g2_tt(T, y, x, params);
 end
-g2 = sparse([],[],[],91,8281);
+g2 = sparse([],[],[],73,5329);
 
 end

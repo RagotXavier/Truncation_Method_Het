@@ -29,8 +29,8 @@ formatSpec = '%16.8f';
 %% DEFINING THE ENDOGENOUS VARIABLES 
 
 str = ['var\n'] ; fprintf(fid, str);
-str = ['r w Z A K GDP u I C Cb Cm Ctp W TT \n'] ; fprintf(fid, str);  % variables
-str = ['rt wt Zt Kt GDPt ut It Ct Cbt Cmt Ctt Wt \n'] ; fprintf(fid, str);
+str = ['r w Z A K GDP u I C Cb W TT \n'] ; fprintf(fid, str);  % variables
+str = ['rt wt Zt Kt GDPt ut It Ct Cbt Wt \n'] ; fprintf(fid, str);
 
 for p = 1:Nbin
     str = ['a',num2str(p),' '] ; fprintf(fid,str);     %  end-of-period
@@ -153,52 +153,6 @@ str = [';'] ;         fprintf(fid, str);str = [' %% equation ', num2str(equa),'\
 
 str = ['Cb = Cba/ba;']; fprintf(fid, str);  str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;   
 
-%%%%%%%%%% CONSUMPTION MEDIAN AGENTS %%%%%%%%%%%%%%%%%%%%%%%%
-str = ['\n'] ;         fprintf(fid, str);
-str = ['#Cma =('] ; fprintf(fid, str);
-for h = [m']
-        str = ['+',num2str(Sp(h),formatSpec),'*c',num2str(h)] ; fprintf(fid, str);
-         if mod(h,5)==0; %multiple de 10
-        str = ['\n'] ;         fprintf(fid, str);
-    end;
-end;
-str = [');']; fprintf(fid, str);str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;
-
-str = ['#ma = ']; fprintf(fid, str);
-for h = [m']
-     str    = ['+',num2str(Sp(h),formatSpec),'*1']; fprintf(fid, str);
-      if mod(h,5)==0; %multiple de 10
-         str = ['\n'] ;         fprintf(fid, str);
-     end;  
-end;
-str = [';'] ;         fprintf(fid, str);str = [' %% equation ', num2str(equa),'\n\n']; fprintf(fid, str); equa = equa+1;  
-
-
-str = ['Cm = Cma/ma;']; fprintf(fid, str);  str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;   
-
-%%%%%%%%%% CONSUMPTION TOP AGENTS %%%%%%%%%%%%%%%%%%%%%%%%
-str = ['\n'] ;         fprintf(fid, str);
-str = ['#Ctpa =('] ; fprintf(fid, str);
-for h = [t']
-        str = ['+',num2str(Sp(h),formatSpec),'*c',num2str(h)] ; fprintf(fid, str);
-         if mod(h,5)==0; %multiple de 10
-        str = ['\n'] ;         fprintf(fid, str);
-    end;
-end;
-str = [');']; fprintf(fid, str);str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;
-
-str = ['#ta = ']; fprintf(fid, str);
-for h = [t']
-     str    = ['+',num2str(Sp(h),formatSpec),'*1']; fprintf(fid, str);
-      if mod(h,5)==0; %multiple de 10
-         str = ['\n'] ;         fprintf(fid, str);
-     end;  
-end;
-str = [';'] ;         fprintf(fid, str);str = [' %% equation ', num2str(equa),'\n\n']; fprintf(fid, str); equa = equa+1;  
-
-
-str = ['Ctp = Ctpa/ta;']; fprintf(fid, str);  str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;   
-
 
 %%%%%%%%%% TOTAL SAVINGS %%%%%%%%%%%%%%%%%%%%%%%%
 str = ['A = '] ; fprintf(fid, str);
@@ -214,8 +168,6 @@ str = ['ut = 100*u;'] ; fprintf(fid, str);  str = [' %% equation ', num2str(equa
 str = ['Kt = 100*(K/',num2str(K,formatSpec),'-1);'] ; fprintf(fid, str);  str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;
 str = ['Ct = 100*(C/steady_state(C)-1);'] ; fprintf(fid, str);  str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;
 str = ['Cbt = 100*(Cb/',num2str(Cbs,formatSpec),'-1);'] ; fprintf(fid, str);  str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;
-str = ['Cmt = 100*(Cm/',num2str(Cms,formatSpec),'-1);'] ; fprintf(fid, str);  str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;
-str = ['Ctt = 100*(Ctp/',num2str(Cts,formatSpec),'-1);'] ; fprintf(fid, str);  str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;
 str = ['wt = 100*(w/',num2str(eco.w,formatSpec),'-1);'] ; fprintf(fid, str);  str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;
 str = ['rt = 100*(r - ',num2str(eco.R-1,formatSpec),');'] ; fprintf(fid, str); str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;
 str = ['Zt = ut;'] ; fprintf(fid, str);  str = [' %% equation ', num2str(equa),'\n']; fprintf(fid, str); equa = equa+1;
@@ -249,8 +201,6 @@ str = ['GDP = ', num2str(Y,formatSpec),';\n'] ; fprintf(fid, str);
 str = ['I = ', num2str(I,formatSpec),';\n'] ; fprintf(fid, str);
 str = ['C = ', num2str(Ctot,formatSpec),';\n'] ; fprintf(fid, str);
 str = ['Cb = ', num2str(Cbs,formatSpec),';\n'] ; fprintf(fid, str);
-str = ['Cm = ', num2str(Cms,formatSpec),';\n'] ; fprintf(fid, str);
-str = ['Ctp = ', num2str(Cts,formatSpec),';\n'] ; fprintf(fid, str);
 str = ['TT = ', num2str(eco.Agg.TT,formatSpec),';\n'] ; fprintf(fid, str);
 str = ['W = ', num2str(Ws,formatSpec),';\n'] ; fprintf(fid, str);
 
@@ -277,7 +227,7 @@ str = ['shocks;\n var eps; stderr ',num2str(sigma_u,formatSpec),';\n end;\n'] ; 
 
 
 str = ['options_.TeX=1;\n\n'] ; fprintf(fid, str);
-str = ['stoch_simul (order=1,irf=200, periods=10000) ut Zt GDPt Ct Cbt Cmt Ctt Kt It Wt rt wt u Z GDP C Cb Cm Ctp K I W r w;'] ; fprintf(fid, str);
+str = ['stoch_simul (order=1,irf=200, periods=10000) ut Zt GDPt Ct Cbt Kt It Wt rt wt u Z GDP C Cb K I W r w;'] ; fprintf(fid, str);
 
 
 %% CALLING DYNARE
@@ -288,10 +238,10 @@ dynare DyTruncation noclearall
 
 %% GENERATING THE RESULTS
 
-save tofigtruncation ut_eps Zt_eps GDPt_eps Ct_eps Cbt_eps Cmt_eps Ctt_eps Kt_eps It_eps Wt_eps rt_eps wt_eps 
+save tofigtruncation ut_eps Zt_eps GDPt_eps Ct_eps Cbt_eps Kt_eps It_eps Wt_eps rt_eps wt_eps 
 %save totaltruncation oo_
 
-save tofigtruncationsim u Z GDP C Cb Cm Ctp K I W r w 
-save tofigtruncationsimt ut Zt GDPt Ct Cbt Cmt Ctt Kt It Wt rt wt 
+save tofigtruncationsim u Z GDP C Cb K I W r w 
+save tofigtruncationsimt ut Zt GDPt Ct Cbt Kt It Wt rt wt 
 
 

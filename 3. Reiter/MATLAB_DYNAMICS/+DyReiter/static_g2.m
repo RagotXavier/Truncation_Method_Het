@@ -18,6 +18,6 @@ function g2 = static_g2(T, y, x, params, T_flag)
 if T_flag
     T = DyReiter.static_g2_tt(T, y, x, params);
 end
-g2 = sparse([],[],[],2030,4120900);
+g2 = sparse([],[],[],2026,4104676);
 
 end

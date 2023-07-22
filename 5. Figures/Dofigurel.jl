@@ -14,8 +14,6 @@ Z_eps = dset["Z_eps"]
 GDP_eps= dset["GDP_eps"]
 C_eps = dset["C_eps"]
 Cbs_eps = dset["Cbs_eps"]
-Cms_eps = dset["Cms_eps"]
-Cts_eps = dset["Cts_eps"]
 K_eps= dset["K_eps"]
 I_eps= dset["I_eps"]
 W_eps= dset["W_eps"] # be careful : welfare is in in level variation
@@ -43,8 +41,6 @@ Zt_epsT = dset["Zt_eps"]
 GDPt_epsT= dset["GDPt_eps"]
 Ct_epsT = dset["Ct_eps"]
 Cbt_epsT = dset["Cbt_eps"]
-Cmt_epsT = dset["Cmt_eps"]
-Ctt_epsT = dset["Ctt_eps"]
 Kt_epsT= dset["Kt_eps"]
 It_epsT= dset["It_eps"]
 Wt_epsT= dset["Wt_eps"]
@@ -60,8 +56,6 @@ Zt_epsR = dset["Zt_eps"]
 GDPt_epsR= dset["GDPt_eps"]
 Ct_epsR = dset["Ct_eps"]
 Cbt_epsR = dset["Cbt_eps"]
-Cmt_epsR = dset["Cmt_eps"]
-Ctt_epsR = dset["Ctt_eps"]
 Kt_epsR= dset["Kt_eps"]
 It_epsR= dset["It_eps"]
 Wt_epsR= dset["Wt_eps"]
@@ -107,18 +101,6 @@ p4= plot!(Cbt_epsR ,label="Reiter", linewidth = 2, dpi=300,linestyle =:dash)
 p4= plot!(Cbs_eps[1:TimePeriods], label="BKM", linewidth = 2, dpi=300, color = :green, linestyle =:dash)
 p4= plot!(Ct_epsRa ,label="RA", linewidth = 2, dpi=300,linestyle =:dash)
 title!("\$C_{bot}\$")
-
-p5= plot(Cmt_epsT ,label="Truncation \$N=5\$", linewidth = 2, dpi=300, color = :blue)
-p5= plot!(Cmt_epsR ,label="Reiter", linewidth = 2, dpi=300,linestyle =:dash)
-p5= plot!(Cms_eps[1:TimePeriods], label="BKM", linewidth = 2, dpi=300, color = :green, linestyle =:dash)
-p5= plot!(Ct_epsRa ,label="RA", linewidth = 2, dpi=300,linestyle =:dash)
-title!("\$C_{med}\$")
-
-p6= plot(Ctt_epsT ,label="Truncation \$N=5\$", linewidth = 2, dpi=300, color = :blue)
-p6= plot!(Ctt_epsR ,label="Reiter", linewidth = 2, dpi=300,linestyle =:dash)
-p6= plot!(Cts_eps[1:TimePeriods], label="BKM", linewidth = 2, dpi=300, color = :green, linestyle =:dash)
-p6= plot!(Ct_epsRa ,label="RA", linewidth = 2, dpi=300,linestyle =:dash)
-title!("\$C_{top}\$")
 
 p7= plot(Kt_epsT ,label="Truncation \$N=5\$", linewidth = 2, dpi=300, color = :blue)
 p7= plot!(Kt_epsR ,label="Reiter", linewidth = 2, dpi=300,linestyle =:dash)
@@ -167,8 +149,6 @@ ZtT = dset["Zt"]
 GDPtT= dset["GDPt"]
 CtT = dset["Ct"]
 CbtT = dset["Cbt"]
-CmtT = dset["Cmt"]
-CttT = dset["Ctt"]
 KtT= dset["Kt"]
 ItT= dset["It"]
 WtT= dset["Wt"]
@@ -184,8 +164,6 @@ ZtR = dset["Zt"]
 GDPtR= dset["GDPt"]
 CtR = dset["Ct"]
 CbtR = dset["Cbt"]
-CmtR = dset["Cmt"]
-CttR = dset["Ctt"]
 KtR= dset["Kt"]
 ItR= dset["It"]
 WtR= dset["Wt"]
